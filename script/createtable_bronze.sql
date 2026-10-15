@@ -1,3 +1,9 @@
+/*
+This script creates the tables with the structured schema. It first checks if the table exists and if it exists it drops the table.
+The object id function takes the table and type as the parameter here 'U' implies user table.
+IF OBJECT_ID('bronze.crm', 'U'), you are explicitly telling SQL Server: Look for an object named bronze.crm, but only check 
+if it's a regular user table. Ignore it if it's a view, a stored procedure, or anything else
+*/
 USE data_warehouse;
 
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
