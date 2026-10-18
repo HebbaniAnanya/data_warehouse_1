@@ -1,3 +1,19 @@
+/* 
+===========================================================================================
+Stored Procedure: Load Silver layer (Bronze -> Silver)
+===========================================================================================
+Strict purpose:
+	This stored procedure performs the ETL(Extract, Transform and Load) to populate the silver
+schema from the bronze schema.
+
+Actions performed: 
+	-This stored procedure truncates the tables 
+	- Insert the transformed and cleaned data from the Bronze layer
+
+Parameters:
+	This procedure does not accept any parameters neither returns anything.
+*/
+
 EXEC silver.load_silver;
 USE data_warehouse;
 CREATE OR ALTER PROCEDURE silver.load_silver AS
