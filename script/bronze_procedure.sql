@@ -1,5 +1,12 @@
-/* This script is used to create and execute a stored procedure load_bronze.
-
+/* 
+====================================================================================
+DDL Script: This script is used to create and execute a stored procedure load_bronze.
+====================================================================================
+Strict purpose:
+The purpose of this script is to create tables in the bronze schema, it will drop the 
+tables if they already exist.
+Run this script to re define the the DDL structure of the bronze tables.
+====================================================================================
 */
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
