@@ -24,6 +24,11 @@ The data pipeline follows a multi-layered Medallion architecture to ensure data 
 2. **Silver Layer (Cleaned & Conformed):** Cleansing layer where data types are fixed, duplicates are removed, nulls are handled, and business rules are applied.
 3. **Gold Layer (Aggregated & Dimensional):** Consumption-ready layer structured into analytical models (Star Schema / Fact and Dimension tables) optimized for BI and reporting.
 
+```mermaid
+graph LR
+    A[Raw Sources: CRM & Ops] -->|Ingest| B(Bronze Layer: Raw)
+    B -->|Clean & Deduplicate| C(Silver Layer: Conformed)
+    C -->|Dimensional Modeling| D(Gold Layer: Star Schema / Fact & Dim)
 ---
 
 ## 📂 Project Directory Structure
